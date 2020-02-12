@@ -1,16 +1,16 @@
 # Micro Frontends
 **Extending the Microservice Paradigms to Web Development**
 
-The actual site can be found at [micro-frontends.org](https://micro-frontends.org/).
+De orginele site kan gevonden worden op [micro-frontends.org](https://micro-frontends.org/).
 
 ## Author
 
-Michael Geers [@naltatis](https://twitter.com/naltatis)
+Dit is een vertaling door Niels Vredeveldt, het orginele artikel is geschreven door Michael Geers [@naltatis](https://twitter.com/naltatis)
 
 ## Contribute
 
-The site is hosted via Github Pages (see `index.md`).
-So feel free to contribute by submitting issues or pull requests.
+De site wordt gehost via Github Pages (zie `index.md`).
+Voel je vrij om bij te dragen door problemen in te dienen of pull requests aan te maken.
 
 ## License
 
