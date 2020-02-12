@@ -3,16 +3,16 @@
 
 De orginele site kan gevonden worden op [micro-frontends.org](https://micro-frontends.org/).
 
-## Author
+## Auteur
 
 Dit is een vertaling door Niels Vredeveldt, het orginele artikel is geschreven door Michael Geers [@naltatis](https://twitter.com/naltatis)
 
-## Contribute
+## Bijdragen
 
 De site wordt gehost via Github Pages (zie `index.md`).
 Voel je vrij om bij te dragen door problemen in te dienen of pull requests aan te maken.
 
-## License
+## Licentie
 
 The MIT License
 
