@@ -1,26 +1,27 @@
-Techniques, strategies and recipes for building a __modern web app__ with __multiple teams__ that can __ship features independently__.
+Technieken, strategieën en recepten om __moderne web applicaties__ te maken met __meerdere teams__ die __onafhankelijke functionaliteiten direct kunnen leveren__.
 
-## What are Micro Frontends?
+## Wat zijn Micro Frontends?
 
-The term __Micro Frontends__ first came up in [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar/techniques/micro-frontends) at the end of 2016. It extends the concepts of micro services to the frontend world. The current trend is to build a feature-rich and powerful browser application, aka single page app, which sits on top of a micro service architecture. Over time the frontend layer, often developed by a separate team, grows and gets more difficult to maintain. That's what we call a [Frontend Monolith](https://www.youtube.com/watch?v=pU1gXA0rfwc).
+De term __Micro Frontends__ kwam als eerst voorbij op [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar/techniques/micro-frontends) aan het eind van 2016. Het breidt het concept van microservices uit naar de frontend-wereld. De huidige trend is om een veelzijdige en krachtige browsertoepassing, ook bekend als een single page application, te bouwen die boven op een microservices architectuur zit. Na verloop van tijd groeit de frontend, vaak ontwikkeld door een afzonderlijk team, en wordt deze moeilijker te onderhouden. Dit is wat we een [Frontend Monoliet](https://www.youtube.com/watch?v=pU1gXA0rfwc) noemen.
 
-The idea behind Micro Frontends is to think about a website or web app as __a composition of features__ which are owned by __independent teams__. Each team has a __distinct area of business__ or __mission__ it cares about and specialises in. A team is __cross functional__ and develops its features __end-to-end__, from database to user interface.
+Het idee achter Micro Frontends is om een website of web applicatie te beschouwen als een __samenstelling van functies__. Elke functie is hierbij eigendom van een __zelfstandig team__. Elk team heeft een duidelijk __bedrijfsonderdeel__ of __missie__ waar het om geeft en gespecialeerd in is. Een team is __cross functional__ en ontwikkelt zijn functies __end-to-end__, van database tot gebruikersinterface.
 
-However, this idea is not new. It has a lot in common with the [Self-contained Systems](http://scs-architecture.org/) concept. In the past approaches like this went by the name of [Frontend Integration for Verticalised Systems](https://dev.otto.de/2014/07/29/scaling-with-microservices-and-vertical-decomposition/). But Micro Frontends is clearly a more friendly and less bulky term.
+Dit idee is echter niet nieuw. Het heeft veel gemeen met het [Self-contained Systems](http://scs-architecture.org/) concept. In het verleden krijgen dergelijke aanpakken de naam [Frontend Integration for Verticalised Systems](https://dev.otto.de/2014/07/29/scaling-with-microservices-and-vertical-decomposition/). Maar Micro Frontends is duidelijk een vriendelijker en minder groot begrip.
 
-__Monolithic Frontends__
+__Monolithische Frontends__
 ![Monolithic Frontends](./ressources/diagrams/organisational/monolith-frontback-microservices.png)
 
 
-__Organisation in Verticals__
+__Verticale teans__
 ![End-To-End Teams with Micro Frontends](./ressources/diagrams/organisational/verticals-headline.png)
 
-## What's a Modern Web App?
+## Wat is een moderne web applicatie ?
 
-In the introduction I've used the phrase "building a modern web app". Let's define the assumptions that are connected with this term.
+In de inleiding heb ik de uitdrukking "Om moderne web applicaties te maken" gebruikt. Laten we de aannnames definiëren die verband houden met deze term.
 
-To put this into a broader perspective, [Aral Balkan](https://ar.al/) has written a blog post about what he calls the [Documents‐to‐Applications Continuum](https://ar.al/notes/the-documents-to-applications-continuum/). He comes up with the concept of a sliding scale where a site, built out of __static documents__, connected via links, is __on the left__ end and a pure behaviour driven, __contentless application__ like an online photo editor is __on the right__.
+Om dit in een breder perspectief te plaatsen heeft [Aral Balkan](https://ar.al/) een blogpost geschreven over wat hij de [Documents‐to‐Applications Continuum](https://ar.al/notes/the-documents-to-applications-continuum/) noemt. Hij komt met het concept van een schaal waarbij een site, opgebouwd uit __statische documenten__, verbonden is via links aan de __linkerkant__. Aan de __rechterkant__ bevind zich een behaviour driven, __contentless application__, zoals een online foto-editor.
 
+----
 If you would position your project on the __left side of this spectrum__, an __integration on webserver level__ is a good fit. With this model a server collects and __concatenates HTML strings__ from all components that make up the page requested by the user. Updates are done by reloading the page from the server or replacing parts of it via ajax. [Gustaf Nilsson Kotte](https://twitter.com/gustaf_nk/) has written a [comprehensive article](https://gustafnk.github.io/microservice-websites/) on this topic.
 
 When your user interface has to provide __instant feedback__, even on unreliable connections, a pure server rendered site is not sufficient anymore. To implement techniques like [Optimistic UI](https://www.smashingmagazine.com/2016/11/true-lies-of-optimistic-user-interfaces/) or [Skeleton Screens](http://www.lukew.com/ff/entry.asp?1797) you need to be able to also __update__ your UI __on the device itself__. Google's term [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/) aptly describes the __balancing act__ of being a good citizen of the web (progressive enhancement) while also providing app-like performance. This kind of application is located somewhere __around the middle of the site-app-continuum__. Here a solely server based solution is not sufficient anymore. We have to move the __integration into the browser__, and this is the focus of this article.
