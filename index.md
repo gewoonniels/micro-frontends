@@ -6,13 +6,13 @@ De term __Micro Frontends__ kwam als eerst voorbij op [ThoughtWorks Technology R
 
 Het idee achter Micro Frontends is om een website of web applicatie te beschouwen als een __samenstelling van functies__. Elke functie is hierbij eigendom van een __zelfstandig team__. Elk team heeft een duidelijk __bedrijfsonderdeel__ of __missie__ waar het om geeft en gespecialeerd in is. Een team is __cross functional__ en ontwikkelt zijn functies __end-to-end__, van database tot gebruikersinterface.
 
-Dit idee is echter niet nieuw. Het heeft veel gemeen met het [Self-contained Systems](http://scs-architecture.org/) concept. In het verleden krijgen dergelijke aanpakken de naam [Frontend Integration for Verticalised Systems](https://dev.otto.de/2014/07/29/scaling-with-microservices-and-vertical-decomposition/). Maar Micro Frontends is duidelijk een vriendelijker en minder groot begrip.
+Dit idee is echter niet nieuw. Het heeft veel gemeen met het [Self-contained Systems](http://scs-architecture.org/) concept. In het verleden kregen dergelijke aanpakken de naam [Frontend Integration for Verticalised Systems](https://dev.otto.de/2014/07/29/scaling-with-microservices-and-vertical-decomposition/). Maar Micro Frontends is duidelijk een vriendelijker en minder groot begrip.
 
 __Monolithische Frontends__
 ![Monolithic Frontends](./ressources/diagrams/organisational/monolith-frontback-microservices.png)
 
 
-__Verticale teans__
+__Verticale teams__
 ![End-To-End Teams with Micro Frontends](./ressources/diagrams/organisational/verticals-headline.png)
 
 ## Wat is een moderne web applicatie ?
